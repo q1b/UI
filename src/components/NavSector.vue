@@ -12,22 +12,20 @@
         block
         ring-indigo-500
         !p-1
-        hover:shadow-btn-blueGray
         focus:text-blueGray-900
         group
       "
     >
-      <heroicons-outline:menu-alt-2-icon
-        :class="open ? 'text-indigo-600' : ''"
+      <MenuAlt2Icon
+        :class="open ? 'text-indigo-600' : 'text-indigo-400' "
         class="
           h-6
           w-6
-          text-white
-          group-hover:text-indigo-900
+          group-hover:text-indigo-600
           transition-colors
           duration-300
         "
-      ></heroicons-outline:menu-alt-2-icon>
+      ></MenuAlt2Icon>
     </PopoverButton>
     <transition
       enter-active-class="transition duration-200 ease-out"
@@ -83,9 +81,9 @@
                     select-none
                   "
                 >{{ item.Name }}</span>
-                <heroicons-outline:chevron-right-icon
+                <chevron-right-icon
                   class="w-5 h-5 text-indigo-500"
-                ></heroicons-outline:chevron-right-icon>
+                ></chevron-right-icon>
               </MenuButton>
               <transition
                 enter-active-class="transition duration-100 ease-out"
@@ -148,7 +146,7 @@
                           leave-to-class="transform opacity-50"
                         >
                           <component
-                            :is="'heroicons-solid:check-circle-icon'"
+                            :is="active ? SolidCheckCircle : OutlineCheckCircle"
                             class="text-indigo-700 w-6 h-6"
                             aria-hidden="true"
                           ></component>
@@ -175,8 +173,8 @@ import {
   MenuItems,
   MenuItem,
 } from '@headlessui/vue'
-// import { CheckCircleIcon } from '@heroicons/vue/outline'
-// import { CheckCircleIcon as SolidCheckCircle } from '@heroicons/vue/solid'
+import { MenuAlt2Icon, ChevronRightIcon, CheckCircleIcon as OutlineCheckCircle } from '@heroicons/vue/outline'
+import { CheckCircleIcon as SolidCheckCircle } from '@heroicons/vue/solid'
 
 const items = [
   {
