@@ -1,0 +1,70 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\Sukhpreet\AppData\Local\Programs\Python\Python39;C:\Appium\Sdk\build-tools;C:\Appium\Sdk\tools;C:\Appium\Sdk\platform-tools;C:\Users\Sukhpreet\Desktop;C:\Users\Sukhpreet\Desktop\chromedriver_win32 (1)\chromedriver;C:\ProgramData\chocolatey\bin;C:\Users\Sukhpreet\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Sukhpreet\AppData\Roaming\nvm;C:\Program Files\nodejs;E:\Neovim\bin;C:\Program Files\CMake\bin;C:\Program Files\LLVM\bin;C:\Users\Sukhpreet\.cargo\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Vim\vim82;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\Sukhpreet\.cargo\bin;C:\Ruby27-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Sukhpreet\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Sukhpreet\AppData\Local\Programs\Python\Python39\;C:\Users\Sukhpreet\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm 2020.2\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2020.2\bin;C:\Program Files\JetBrains\PyCharm 2020.2\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2020.2\bin;;C:\Users\Sukhpreet\.vscode\extensions\eth-sri.vscode-silq-0.0.30\bin;C:\Users\Sukhpreet\AppData\Roaming\Pub\Cache\bin;C:\Windows\System32;F:\Operation drive\Microsoft VS Code Insiders\bin;C:\tools\Neovim\bin;C:\Users\Sukhpreet\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Sukhpreet\AppData\Local\Microsoft\WindowsApps;C:\Users\Sukhpreet\go\bin;C:\Program Files\mingw-w64\mingw64\bin;C:\Program Files\MongoDB\Server\4.4\bin;C:\Program Files\Sublime Text\;C:\Program Files (x86)\Yarn\bin;C:\Users\Sukhpreet\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.17.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\Sukhpreet\AppData\Local\Yarn\Cache\v6\npm-pnpm-6.10.0-9733248edcd6322b3db08d68865d0dcd1aac6d8c-integrity\node_modules\pnpm\dist\vendor\fastlist-0.3.0-x86.exe' -> 'F:\Project\SelfV2\my-vitesse-app\node_modules\pnpm\dist\vendor\fastlist-0.3.0-x86.exe'
+
+npm manifest: 
+  {
+    "private": true,
+    "scripts": {
+      "dev": "vite --port 3333 --open",
+      "build": "cross-env NODE_ENV=production vite-ssg build",
+      "preview": "vite preview",
+      "preview-https": "serve dist"
+    },
+    "dependencies": {
+      "@vueuse/core": "^5.1.2",
+      "@vueuse/head": "^0.6.0",
+      "nprogress": "^0.2.0",
+      "prism-theme-vars": "^0.2.2",
+      "vue": "^3.1.4",
+      "vue-i18n": "^9.1.6",
+      "vue-router": "^4.0.10"
+    },
+    "devDependencies": {
+      "@antfu/eslint-config": "^0.7.0",
+      "@iconify/json": "^1.1.368",
+      "@intlify/vite-plugin-vue-i18n": "^2.3.1",
+      "@types/nprogress": "^0.2.0",
+      "@typescript-eslint/eslint-plugin": "^4.28.2",
+      "@vitejs/plugin-vue": "^1.2.4",
+      "@vue/compiler-sfc": "^3.1.4",
+      "@vue/server-renderer": "^3.1.4",
+      "cross-env": "^7.0.3",
+      "eslint": "^7.30.0",
+      "https-localhost": "^4.6.5",
+      "markdown-it-link-attributes": "^3.0.0",
+      "markdown-it-prism": "^2.1.8",
+      "pnpm": "^6.9.1",
+      "typescript": "^4.3.5",
+      "vite": "^2.4.1",
+      "vite-plugin-components": "^0.12.1",
+      "vite-plugin-icons": "^0.6.4",
+      "vite-plugin-md": "^0.6.7",
+      "vite-plugin-pages": "^0.14.9",
+      "vite-plugin-pwa": "^0.8.1",
+      "vite-plugin-vue-layouts": "^0.3.1",
+      "vite-plugin-windicss": "^1.2.3",
+      "vite-ssg": "^0.11.4",
+      "vue-tsc": "^0.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
