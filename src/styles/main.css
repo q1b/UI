@@ -31,8 +31,11 @@ html.dark {
 }
 
 .btn{
-  @apply flex items-center cursor-pointer rounded-lg px-3 py-1 ring-4 focus-visible:outline-none focus:outline-none hover:scale-[.99] transition-color-shadow disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50;
+  @apply flex items-center cursor-pointer rounded-lg px-3 py-1 ring-4 focus-visible:outline-none focus:outline-none hover:scale-95 transition-color-shadow disabled:cursor-default disabled:opacity-50;
   -webkit-tap-highlight-color: transparent;
+}
+.btn-indigo{
+  @apply m-3 text-sm text-white ring-indigo-600 hover:ring-opacity-80 disabled:hover:ring-opacity-100 focus:ring-opacity-50 bg-black font-semibold font-sans;
 }
 
 .icon-btn {

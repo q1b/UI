@@ -8,7 +8,16 @@
           : 'hover:ring-opacity-80 ring-opacity-100',
       ]"
       class="
-        btn
+        flex
+        items-center
+        cursor-pointer
+        rounded-lg
+        ring-4
+        focus-visible:outline-none
+        focus:outline-none
+        transform
+        hover:scale-95
+        transition-color-shadow
         block
         ring-indigo-500
         !p-1
@@ -48,7 +57,7 @@
             "
           >
             <Menu
-              v-for="(item, id) in items"
+              v-for="(item, id) in props.items"
               :key="id"
               :v-slot="{ open }"
               as="div"
@@ -69,6 +78,7 @@
                   transition-colors
                   cursor-pointer
                   flex
+                  focus:outline-none
                   place-content-between
                   items-center
                 "
@@ -122,6 +132,7 @@
                           : 'bg-indigo-50 text-indigo-600',
                         'flex items-center place-content-between font-jetMono font-semibold h-10 rounded-xl group w-full px-3 py-2',
                       ]"
+                      @click="()=>goToThatComponent(listItem.name.toLowerCase())"
                     >
                       <span>
                         {{ listItem.name }}
@@ -173,30 +184,13 @@ import {
   MenuItems,
   MenuItem,
 } from '@headlessui/vue'
+import { useRouter } from 'vue-router'
 import { MenuAlt2Icon, ChevronRightIcon, CheckCircleIcon as OutlineCheckCircle } from '@heroicons/vue/outline'
 import { CheckCircleIcon as SolidCheckCircle } from '@heroicons/vue/solid'
 
-const items = [
-  {
-    Name: 'Button',
-    List: [
-      { name: 'ToggleButton' },
-      { name: 'DropdownButton' },
-      { name: 'ModalButton' },
-      { name: 'PopoverButton' },
-    ],
-  },
-  {
-    Name: 'Automations',
-    List: [{ name: 'Dropdown+Autom' }],
-  },
-  {
-    Name: 'Reports',
-    List: [{ name: 'Dropdown+Repor' }],
-  },
-  {
-    Name: 'Future',
-    List: [{ name: 'Dropdown+Futur' }],
-  },
-]
+const props = defineProps(['items'])
+const router = useRouter()
+const goToThatComponent = (name) => {
+  router.push(`/hi/${name}`)
+}
 </script>

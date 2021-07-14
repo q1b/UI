@@ -13,6 +13,7 @@ declare module 'vue' {
     Footer: typeof import('./src/components/Footer.vue')['default']
     NavSector: typeof import('./src/components/NavSector.vue')['default']
     README: typeof import('./src/components/README.md')['default']
+    ToggleButton: typeof import('./src/components/ToggleButton.vue')['default']
   }
 }
 

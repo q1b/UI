@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import NavSector from '../../components/NavSector.vue'
+import Footer from '../../components/Footer.vue'
+import ToggleButton from '../../components/ToggleButton.vue'
 
+const ComponentList: Object = {
+  footer: Footer,
+  navsector: NavSector,
+  togglebutton: ToggleButton,
+}
 const props = defineProps<{ name: string }>()
 const router = useRouter()
 const { t } = useI18n()
@@ -9,23 +17,14 @@ const { t } = useI18n()
 
 <template>
   <div>
-    <p class="text-4xl">
-      <carbon-pedestrian class="inline-block" />
-    </p>
-    <p>
-      {{ t('intro.hi', { name: props.name }) }}
-    </p>
-    <p class="text-sm opacity-50">
-      <em>{{ t('intro.dynamic-route') }}</em>
-    </p>
-
-    <div>
-      <button
-        class="btn m-3 text-sm mt-8"
-        @click="router.back()"
-      >
-        {{ t('button.back') }}
-      </button>
-    </div>
+    Component Name : {{ props.name }}
+    <component :is="ComponentList[`${props.name}`]" />
   </div>
+  <!-- <div>{{ Footer.__defaults }}</div> -->
+  <button
+    class="btn-indigo btn"
+    @click="router.back()"
+  >
+    {{ t('button.back') }}
+  </button>
 </template>
