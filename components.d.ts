@@ -10,7 +10,6 @@ declare module 'vue' {
     CarbonMoon: typeof import('virtual:vite-icons/carbon/moon')['default']
     CarbonPedestrian: typeof import('virtual:vite-icons/carbon/pedestrian')['default']
     CarbonSun: typeof import('virtual:vite-icons/carbon/sun')['default']
-    CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     NavSector: typeof import('./src/components/NavSector.vue')['default']
     README: typeof import('./src/components/README.md')['default']
