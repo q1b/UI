@@ -1,34 +1,41 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
-import NavSector from '../../components/NavSector.vue'
-import Footer from '../../components/Footer.vue'
-import ToggleButton from '../../components/ToggleButton.vue'
-import DropdownButton from '../../components/DropdownButton.vue'
-import ModalButton from '../../components/ModalButton.vue'
+// import NavSector from '../../components/NavSector.vue'
+// import Footer from '../../components/Footer.vue'
+import BasicToggleButton from '../../components/BasicToggleButton.vue'
+import BasicDropdown from '../../components/BasicDropdown.vue'
+import AdvDropdown from '../../components/AdvDropdown.vue'
+import BasicModal from '../../components/BasicModal.vue'
+import FormModal from '../../components/FormModal.vue'
+import SolidButton from '../../components/SolidButton.vue'
+import OutlineButton from '../../components/OutlineButton.vue'
+import SpecialButton from '../../components/SpecialButton.vue'
 
 const ComponentList: Object = {
-  footer: Footer,
-  navsector: NavSector,
-  togglebutton: ToggleButton,
-  dropdownbutton: DropdownButton,
-  modalbutton: ModalButton,
+  // footer: Footer,
+  // navsector: NavSector,
+  basictogglebutton: BasicToggleButton,
+  basicdropdown: BasicDropdown,
+  advdropdown: AdvDropdown,
+  basicmodal: BasicModal,
+  formmodal: FormModal,
+  solidbutton: SolidButton,
+  outlinebutton: OutlineButton,
+  specialbutton: SpecialButton,
 }
 
 const props = defineProps<{ name: string }>()
-const router = useRouter()
-const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    Component Name : {{ props.name }}
-    <div class="p-10">
-      <component :is="ComponentList[`${props.name}`]" />
+  <section class="w-full">
+    <div class="w-full h-full flex flex-col items-center">
+      <span class="w-full pt-5 text-white text-center text-xl font-jetMono">{{
+        props.name
+      }}</span>
+      <div class="p-10 w-full h-[calc(100%)] flex items-center justify-center">
+        <component :is="ComponentList[`${props.name}`]" />
+      </div>
     </div>
-  </div>
-  <!-- <div>{{ Footer.__defaults }}</div> -->
-  <button class="btn-indigo btn" @click="router.back()">
-    {{ t('button.back') }}
-  </button>
+    <!-- <div>{{ Footer.__defaults }}</div> -->
+  </section>
 </template>

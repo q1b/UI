@@ -136,8 +136,7 @@ export default {
   },
 
   setup() {
-    const isOpen = ref(true)
-
+    const isOpen = ref(false)
     return {
       isOpen,
       closeModal() {
