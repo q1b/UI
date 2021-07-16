@@ -8,20 +8,9 @@ declare module 'vue' {
     BasicDropdown: typeof import('./src/components/BasicDropdown.vue')['default']
     BasicModal: typeof import('./src/components/BasicModal.vue')['default']
     BasicToggleButton: typeof import('./src/components/BasicToggleButton.vue')['default']
-    CarbonCampsite: typeof import('virtual:vite-icons/carbon/campsite')['default']
     CarbonDicomOverlay: typeof import('virtual:vite-icons/carbon/dicom-overlay')['default']
-    CarbonLanguage: typeof import('virtual:vite-icons/carbon/language')['default']
-    CarbonLogoGithub: typeof import('virtual:vite-icons/carbon/logo-github')['default']
-    CarbonMoon: typeof import('virtual:vite-icons/carbon/moon')['default']
-    CarbonSun: typeof import('virtual:vite-icons/carbon/sun')['default']
-    CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
-    DoubleDropdown: typeof import('./src/components/DoubleDropdown.vue')['default']
-    DropdownButton: typeof import('./src/components/DropdownButton.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     FormModal: typeof import('./src/components/FormModal.vue')['default']
-    Modal: typeof import('./src/components/Modal.vue')['default']
-    ModalButton: typeof import('./src/components/ModalButton.vue')['default']
-    NavSector: typeof import('./src/components/NavSector.vue')['default']
     OutlineButton: typeof import('./src/components/OutlineButton.vue')['default']
     README: typeof import('./src/components/README.md')['default']
     Side: typeof import('./src/components/side.vue')['default']
@@ -29,7 +18,6 @@ declare module 'vue' {
     SkeDoubleDropdown: typeof import('./src/components/SkeDoubleDropdown.vue')['default']
     SolidButton: typeof import('./src/components/SolidButton.vue')['default']
     SpecialButton: typeof import('./src/components/SpecialButton.vue')['default']
-    ToggleButton: typeof import('./src/components/ToggleButton.vue')['default']
   }
 }
 

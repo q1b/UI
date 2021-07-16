@@ -1,6 +1,6 @@
 <template>
 	<div
-		id="side-bar"
+		id="sidebar"
 		class="
 			fixed
 			z-40
@@ -44,7 +44,9 @@
 					lg:pt-10 lg:pb-14
 					sticky?lg:h-(screen-18)
 				"
-			></nav>
+			>
+				<slot></slot>
+			</nav>
 		</div>
 	</div>
 </template>

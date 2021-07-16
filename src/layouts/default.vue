@@ -3,22 +3,17 @@
     <!-- <NavSector :items="items" /> -->
     <SidebarToggleBtn v-model:isOpen="isOpen" />
     <div class="flex w-full h-screen flex bg-blueGray-900">
-      <side-bar>
-        <!--  <button class="btn-indigo btn " @click="router.back()">
-          {{ t('button.back') }}
-        </button> -->
-        <SideBarWrapper>
-          <NavComponent>
-            <span class="select-none text-xl absolute top-5">Components</span>
-            <PackedListItems
-              v-for="(items, index) in ComponentList"
-              :key="index"
-              :items="items"
-            >
-            </PackedListItems>
-          </NavComponent>
-        </SideBarWrapper>
-      </side-bar>
+      <side>
+        <span class="select-none text-xl relative left-5 top-0"
+          >Components</span
+        >
+        <PackedListItems
+          v-for="(items, index) in ComponentList"
+          :key="index"
+          :items="items"
+        >
+        </PackedListItems>
+      </side>
       <router-view />
     </div>
     <!-- <div class="mt-5 mx-auto text-center opacity-25 text-sm">
@@ -33,9 +28,6 @@ import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 import PackedListItems, {
   ListElement,
-  SideBar,
-  NavComponent,
-  SideBarWrapper,
   ListElementWrapper,
 } from '../components/AdvSideBar.vue'
 const router = useRouter()
