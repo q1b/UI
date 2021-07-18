@@ -74,15 +74,13 @@
                 as="h3"
                 class="text-lg font-medium leading-6 text-gray-900"
               >
-                Payment successful
+                Basic Modal
               </DialogTitle>
               <div class="mt-2">
                 <p class="text-sm text-gray-500">
-                  Your payment has been successfully submitted. We’ve sent your
-                  an email with all of the details of your order.
+                  Love to create Lorem things which are understand able
                 </p>
               </div>
-
               <div class="mt-4">
                 <button
                   type="button"
@@ -117,14 +115,14 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from "vue";
 import {
   TransitionRoot,
   TransitionChild,
   Dialog,
   DialogOverlay,
   DialogTitle,
-} from '@headlessui/vue'
+} from "@headlessui/vue";
 
 export default {
   components: {
@@ -136,16 +134,16 @@ export default {
   },
 
   setup() {
-    const isOpen = ref(false)
+    const isOpen = ref(false);
     return {
       isOpen,
       closeModal() {
-        isOpen.value = false
+        isOpen.value = false;
       },
       openModal() {
-        isOpen.value = true
+        isOpen.value = true;
       },
-    }
+    };
   },
-}
+};
 </script>

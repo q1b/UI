@@ -1,8 +1,8 @@
 <template>
-  <main class="">
+  <main class="flex items-center justify-center bg-blueGray-900">
     <!-- <NavSector :items="items" /> -->
     <SidebarToggleBtn v-model:isOpen="isOpen" />
-    <div class="flex w-full h-screen flex bg-blueGray-900">
+    <div class="flex w-full min-h-[100vh] flex bg-blueGray-900">
       <side>
         <span class="select-none text-xl relative left-5 top-0"
           >Components</span
@@ -23,55 +23,58 @@
 </template>
 
 <script lang="ts" setup>
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
-import { ref } from 'vue'
+import { useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
+import { ref } from "vue";
 import PackedListItems, {
   ListElement,
   ListElementWrapper,
-} from '../components/AdvSideBar.vue'
-const router = useRouter()
-const { t } = useI18n()
-let isOpen = ref(false)
+} from "../components/AdvSideBar.vue";
+const router = useRouter();
+const { t } = useI18n();
+let isOpen = ref(false);
 
 const ComponentList = [
   {
-    heading: 'Button',
+    heading: "Button",
     list: [
       {
-        value: 'SolidButton',
-        status: '✔',
+        value: "SolidButton",
+        status: "✔",
       },
       {
-        value: 'OutlineButton',
-        status: '✔',
+        value: "OutlineButton",
+        status: "✔",
       },
       {
-        value: 'SpecialButton',
-        status: '✔',
+        value: "SpecialButton",
+        status: "✔",
       },
     ],
   },
   {
-    heading: 'Modals',
+    heading: "Modals",
     list: [
-      { value: 'BasicModal', status: '✔' },
+      { value: "BasicModal", status: "✔" },
       {
-        value: 'FormModal',
-        status: '✔',
+        value: "FormModal",
+        status: "✔",
       },
     ],
   },
   {
-    heading: 'Dropdown',
+    heading: "Dropdown",
     list: [
-      { value: 'BasicDropdown', status: '✔' },
-      { value: 'AdvDropdown', status: '✔' },
+      { value: "BasicDropdown", status: "✔" },
+      { value: "AdvDropdown", status: "✔" },
     ],
   },
   {
-    heading: 'Accorsion',
-    list: [{ value: 'BasicAccorsion', status: '❌' }],
+    heading: "Accordion",
+    list: [
+      { value: "BasicAccordion", status: "✔" },
+      { value: "AdvAccordion", status: "❌" },
+    ],
   },
-]
+];
 </script>

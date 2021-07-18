@@ -3,21 +3,22 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AdvDropdown: typeof import('./src/components/AdvDropdown.vue')['default']
+    AdvDropdown: typeof import('./src/components/Dropdown/AdvDropdown.vue')['default']
     AdvSideBar: typeof import('./src/components/AdvSideBar.vue')['default']
-    BasicDropdown: typeof import('./src/components/BasicDropdown.vue')['default']
-    BasicModal: typeof import('./src/components/BasicModal.vue')['default']
-    BasicToggleButton: typeof import('./src/components/BasicToggleButton.vue')['default']
+    BasicAccordion: typeof import('./src/components/Accordion/BasicAccordion.vue')['default']
+    BasicDropdown: typeof import('./src/components/Dropdown/BasicDropdown.vue')['default']
+    BasicModal: typeof import('./src/components/Modal/BasicModal.vue')['default']
+    BasicToggleButton: typeof import('./src/components/Toggle/BasicToggleButton.vue')['default']
     CarbonDicomOverlay: typeof import('virtual:vite-icons/carbon/dicom-overlay')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
-    FormModal: typeof import('./src/components/FormModal.vue')['default']
-    OutlineButton: typeof import('./src/components/OutlineButton.vue')['default']
+    FormModal: typeof import('./src/components/Modal/FormModal.vue')['default']
+    OutlineButton: typeof import('./src/components/Button/OutlineButton.vue')['default']
     README: typeof import('./src/components/README.md')['default']
     Side: typeof import('./src/components/side.vue')['default']
     SidebarToggleBtn: typeof import('./src/components/sidebarToggleBtn.vue')['default']
-    SkeDoubleDropdown: typeof import('./src/components/SkeDoubleDropdown.vue')['default']
-    SolidButton: typeof import('./src/components/SolidButton.vue')['default']
-    SpecialButton: typeof import('./src/components/SpecialButton.vue')['default']
+    SkeDoubleDropdown: typeof import('./src/components/Dropdown/SkeDoubleDropdown.vue')['default']
+    SolidButton: typeof import('./src/components/Button/SolidButton.vue')['default']
+    SpecialButton: typeof import('./src/components/Button/SpecialButton.vue')['default']
   }
 }
 

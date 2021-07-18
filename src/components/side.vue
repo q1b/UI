@@ -9,7 +9,12 @@
 			overflow-hidden
 			bg-black bg-opacity-25
 			w-full
-			lg:bg-white lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60
+			lg:bg-white
+			lg:sticky
+			lg:max-h-[100vh]
+			lg:overflow-y-visible
+			lg:pt-0
+			lg:w-72
 			xl:w-72
 			lg:block
 			hidden

@@ -1,3 +1,9 @@
 {
-  "extends": "@antfu"
+  // "indent": "off",
+  "extends": [
+    "@antfu","prettier"
+  ]
+  // "rules": {
+  //   "no-tabs": ["error", {"allowIndentationTabs": true}]
+  // }
 }
