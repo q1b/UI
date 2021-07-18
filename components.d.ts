@@ -3,6 +3,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AdvAccordion: typeof import('./src/components/Accordion/AdvAccordion.vue')['default']
     AdvDropdown: typeof import('./src/components/Dropdown/AdvDropdown.vue')['default']
     AdvSideBar: typeof import('./src/components/AdvSideBar.vue')['default']
     BasicAccordion: typeof import('./src/components/Accordion/BasicAccordion.vue')['default']

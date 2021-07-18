@@ -73,7 +73,7 @@ const ComponentList = [
     heading: "Accordion",
     list: [
       { value: "BasicAccordion", status: "✔" },
-      { value: "AdvAccordion", status: "❌" },
+      { value: "AdvAccordion", status: "✔" },
     ],
   },
 ];

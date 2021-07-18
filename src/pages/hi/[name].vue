@@ -5,6 +5,7 @@ import BasicToggleButton from "../../components/Toggle/BasicToggleButton.vue";
 import BasicDropdown from "../../components/Dropdown/BasicDropdown.vue";
 import AdvDropdown from "../../components/Dropdown/AdvDropdown.vue";
 import BasicAccordion from "../../components/Accordion/BasicAccordion.vue";
+import AdvAccordion from "../../components/Accordion/AdvAccordion.vue";
 import BasicModal from "../../components/Modal/BasicModal.vue";
 import FormModal from "../../components/Modal/FormModal.vue";
 import SolidButton from "../../components/Button/SolidButton.vue";
@@ -18,6 +19,7 @@ const ComponentList: Object = {
   basicdropdown: BasicDropdown,
   advdropdown: AdvDropdown,
   basicaccordion: BasicAccordion,
+  advaccordion: AdvAccordion,
   basicmodal: BasicModal,
   formmodal: FormModal,
   solidbutton: SolidButton,
