@@ -24,7 +24,7 @@
           "
         >
           <span>{{ item.Name }}</span>
-          <ChevronUpIcon
+          <heroicons-outline:chevron-up
             :class="open ? 'transform rotate-180' : ''"
             class="w-5 h-5 text-blueGray-800 transition-transform"
           />

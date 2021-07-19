@@ -1,9 +1,9 @@
 <template>
   <main class="flex items-center justify-center bg-blueGray-900">
     <!-- <NavSector :items="items" /> -->
-    <SidebarToggleBtn v-model:isOpen="isOpen" />
+    <!-- <SidebarToggleBtn v-model:isOpen="isOpen" /> -->
     <div class="flex w-full min-h-[100vh] flex bg-blueGray-900">
-      <side>
+      <side v-if="WindowWidth">
         <span class="select-none text-xl relative left-5 top-0"
           >Components</span
         >
@@ -14,6 +14,7 @@
         >
         </PackedListItems>
       </side>
+      <sm-side-bar v-else :items="ComponentList"></sm-side-bar>
       <router-view />
     </div>
     <!-- <div class="mt-5 mx-auto text-center opacity-25 text-sm">
@@ -25,7 +26,7 @@
 <script lang="ts" setup>
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import PackedListItems, {
   ListElement,
   ListElementWrapper,
@@ -33,7 +34,13 @@ import PackedListItems, {
 const router = useRouter();
 const { t } = useI18n();
 let isOpen = ref(false);
-
+const WindowWidth = computed(() => {
+  if (window.innerWidth > 800) {
+    return true;
+  } else {
+    return false;
+  }
+});
 const ComponentList = [
   {
     heading: "Button",
