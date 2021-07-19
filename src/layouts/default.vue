@@ -35,7 +35,7 @@ const router = useRouter();
 const { t } = useI18n();
 let isOpen = ref(false);
 const WindowWidth = computed(() => {
-  if (window.innerWidth > 800) {
+  if (document.firstElementChild.offsetWidth > 800) {
     return true;
   } else {
     return false;

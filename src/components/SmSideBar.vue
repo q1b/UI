@@ -159,7 +159,8 @@
                                                         @click="
                                                             goToThatComponent(
                                                                 item.value.toLowerCase()
-                                                            )
+                                                            ),
+                                                                closeModal()
                                                         "
                                                         class="
                                                             px-3
@@ -220,6 +221,7 @@ import {
 } from "@headlessui/vue";
 import { XIcon, CollectionIcon as OutlineIcon } from "@heroicons/vue/outline";
 import { CollectionIcon as SolidIcon } from "@heroicons/vue/solid";
+
 const isOpen = ref(true);
 
 const router = useRouter();
