@@ -13,8 +13,6 @@ declare module 'vue' {
     Footer: typeof import('./src/components/Footer.vue')['default']
     FormModal: typeof import('./src/components/Modal/FormModal.vue')['default']
     'HeroiconsOutline:chevronUp': typeof import('virtual:vite-icons/heroicons-outline/chevron-up')['default']
-    'HeroiconsSolid:chevronLeft': typeof import('virtual:vite-icons/heroicons-solid/chevron-left')['default']
-    'HeroiconsSolid:chevronUp': typeof import('virtual:vite-icons/heroicons-solid/chevron-up')['default']
     OutlineButton: typeof import('./src/components/Button/OutlineButton.vue')['default']
     README: typeof import('./src/components/README.md')['default']
     Side: typeof import('./src/components/side.vue')['default']

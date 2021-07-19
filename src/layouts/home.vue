@@ -26,21 +26,25 @@
 <script lang="ts" setup>
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
-import { ref, computed } from "vue";
+import { ref, watch } from "vue";
 import PackedListItems, {
   ListElement,
   ListElementWrapper,
 } from "../components/AdvSideBar.vue";
 const router = useRouter();
 const { t } = useI18n();
-let isOpen = ref(false);
-const WindowWidth = computed(() => {
-  if (document.firstElementChild.offsetWidth > 800) {
-    return true;
-  } else {
-    return false;
-  }
-});
+const isLg = ref(false);
+watch(
+  () => {},
+  () => {
+    if (document.firstElementChild.offsetWidth > 800) {
+      isLg.value = true;
+    } else {
+      isLg.value = false;
+    }
+  },
+  { immediate: true }
+);
 const ComponentList = [
   {
     heading: "Button",

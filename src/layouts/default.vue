@@ -3,7 +3,7 @@
     <!-- <NavSector :items="items" /> -->
     <!-- <SidebarToggleBtn v-model:isOpen="isOpen" /> -->
     <div class="flex w-full min-h-[100vh] flex bg-blueGray-900">
-      <side v-if="WindowWidth">
+      <side v-if="isLg">
         <span class="select-none text-xl relative left-5 top-0"
           >Components</span
         >
@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
-import { ref, computed } from "vue";
+import { ref, watch } from "vue";
 import PackedListItems, {
   ListElement,
   ListElementWrapper,
@@ -34,13 +34,18 @@ import PackedListItems, {
 const router = useRouter();
 const { t } = useI18n();
 let isOpen = ref(false);
-const WindowWidth = computed(() => {
-  if (document.firstElementChild.offsetWidth > 800) {
-    return true;
-  } else {
-    return false;
-  }
-});
+const isLg = ref(false);
+watch(
+  () => {},
+  () => {
+    if (document.firstElementChild.offsetWidth > 800) {
+      isLg.value = true;
+    } else {
+      isLg.value = false;
+    }
+  },
+  { immediate: true }
+);
 const ComponentList = [
   {
     heading: "Button",
