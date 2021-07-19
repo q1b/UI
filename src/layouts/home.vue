@@ -3,7 +3,7 @@
     <!-- <NavSector :items="items" /> -->
     <!-- <SidebarToggleBtn v-model:isOpen="isOpen" /> -->
     <div class="flex w-full min-h-[100vh] flex bg-blueGray-900">
-      <side v-if="WindowWidth">
+      <side v-if="isLg">
         <span class="select-none text-xl relative left-5 top-0"
           >Components</span
         >
